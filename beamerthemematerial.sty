@@ -1,0 +1,46 @@
+\mode<presentation>
+
+% Requirement
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage[sfdefault]{roboto}
+\RequirePackage[many]{tcolorbox}
+
+% Settings
+\useinnertheme{material}
+\useoutertheme{material}
+\usecolortheme{material}
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamerfont*{title}{size=\Huge}
+\setbeamerfont*{frametitle}{size=\large}
+
+\newenvironment{card}{%
+  \begin{tcolorbox}[colback=BGgrey04, colbacktitle=primary, %
+                    enhanced, sharpish corners=all,%
+                    fuzzy shadow={0mm}{ 0.9mm}{ 0.6mm}{0.2mm}{shadow!20!BGgrey03}, % top
+                    fuzzy shadow={0mm}{-0.6mm}{-0.1mm}{0.2mm}{shadow!40!BGgrey03}, % bottomSmall
+                    fuzzy shadow={0mm}{-0.2mm}{-0.2mm}{0.2mm}{shadow!20!BGgrey03}, % bottomBig
+                    title filled, boxrule=0mm,
+                    left=6mm, right=6mm, top=6mm, bottom=6mm, middle=4mm,
+                    segmentation code={\path[draw=BGgrey01](segmentation.west) -- (segmentation.east);}]%
+    }{%
+  \end{tcolorbox}%
+  }
+  
+\newenvironment{cardTitle}[1]{%
+  \begin{tcolorbox}[colback=BGgrey04, colbacktitle=primary, %
+                    enhanced, sharpish corners=all,%
+                    fuzzy shadow={0mm}{ 0.9mm}{ 0.6mm}{0.2mm}{shadow!20!BGgrey03}, % top
+                    fuzzy shadow={0mm}{-0.6mm}{-0.1mm}{0.2mm}{shadow!40!BGgrey03}, % bottomSmall
+                    fuzzy shadow={0mm}{-0.2mm}{-0.2mm}{0.2mm}{shadow!20!BGgrey03}, % bottomBig
+                    title filled, boxrule=0mm, title=#1,
+                    left=6mm, right=6mm, top=3mm, bottom=6mm, middle=4mm, toptitle=4mm, bottomtitle=3mm,
+                    segmentation code={\path[draw=BGgrey01](segmentation.west) -- (segmentation.east);}]%
+    }{%
+  \end{tcolorbox}%
+  }
+  
+
+\mode<all>

@@ -1,0 +1,61 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{multicol}
+
+\title{Material Design Theme}
+\date[PLC]{Private Little Conference}
+\author[Šubert]{Eduard Šubert}
+
+\usetheme{material}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\begin{multicols}{2}
+  \begin{card}
+  In the example al the text inside the centering environment will be centred. 
+  \tcblower
+  Environments may {\color{accentD}accept optional} parameters that usually are passed inside brackets
+  \end{card}
+
+  \begin{cardTitle}{title is here!}
+  Environments may accept optional parameters that usually are passed inside brackets
+  \end{cardTitle}
+\end{multicols}
+\end{frame}
+
+\begin{frame} 
+\begin{theorem}[tramtadada]
+There is no largest prime number. 
+\end{theorem} 
+\begin{card}
+\begin{enumerate} 
+\item Suppose $p$ were the largest prime number. 
+\item Let $q$ be the product of the first $p$ numbers. 
+\item Then $q+1$ is not divisible by any of them. 
+\item But $q + 1$ is greater than $1$, thus divisible by some prime
+number not in the first $p$ numbers.
+\end{enumerate}
+\end{card}
+\end{frame}
+
+\begin{frame}{A longer title}
+\begin{card}
+\begin{itemize}
+\item one
+\item two
+\end{itemize}
+\begin{itemize}
+\item one
+\item two
+\end{itemize}
+\end{card}
+\end{frame}
+
+\end{document}
