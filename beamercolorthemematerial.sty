@@ -2,6 +2,43 @@
 
 % Settings
 
+\newcommand{\iconFolder}{iconLight}
+
+% light theme
+\newcommand{\useLightTheme}{
+\definecolor{textPrimary} {HTML}{FFFFFF}
+\definecolor{textAccent}  {HTML}{FFFFFF}
+\definecolor{text}        {HTML}{000000}
+\setbeamercolor*{normal text}{fg=text}
+\renewcommand{\iconFolder}{iconLight}
+
+\definecolor{shadow}{HTML}{000000}
+\definecolor{BGgrey01}{HTML}{E0E0E0}
+\definecolor{BGgrey02}{HTML}{F5F5F5}
+\definecolor{BGgrey03}{HTML}{FAFAFA}
+\definecolor{BGgrey04}{HTML}{FFFFFF}
+}
+
+
+% dark theme
+\newcommand{\useDarkTheme}{
+\definecolor{textPrimary} {HTML}{000000}
+\definecolor{textAccent}  {HTML}{FFFFFF}
+\definecolor{text}        {HTML}{FFFFFF}
+\setbeamercolor*{normal text}{fg=text}
+\renewcommand{\iconFolder}{iconDark}
+
+\definecolor{shadow}{HTML}{000000}
+\definecolor{BGgrey01}{HTML}{000000}
+\definecolor{BGgrey02}{HTML}{212121}
+\definecolor{BGgrey03}{HTML}{303030}
+\definecolor{BGgrey04}{HTML}{424242}
+}
+
+\useLightTheme
+
+
+
 % Indigo & Pink
 %\definecolor{primary} {HTML}{3F51B5}
 %\definecolor{primaryL}{HTML}{C5CAE9}
@@ -20,6 +57,9 @@
 \definecolor{accentL}{HTML}{FFFF8D}
 \definecolor{accentD}{HTML}{FFD600}
 
+\definecolor{textAccent}  {HTML}{FFFFFF}
+\renewcommand{\iconFolder}{iconDark}
+
 % Lime & 
 %\definecolor{primary} {HTML}{CDDC39}
 %\definecolor{primaryL}{HTML}{E6EE9C}
@@ -29,31 +69,10 @@
 %\definecolor{accentL}{HTML}{FF5252}
 %\definecolor{accentD}{HTML}{D50000}
 
-% light theme
-\definecolor{textPrimary} {HTML}{FFFFFF}
-\definecolor{textAccent}  {HTML}{FFFFFF}
 
-\definecolor{shadow}{HTML}{000000}
-\definecolor{BGgrey01}{HTML}{E0E0E0}
-\definecolor{BGgrey02}{HTML}{F5F5F5}
-\definecolor{BGgrey03}{HTML}{FAFAFA}
-\definecolor{BGgrey04}{HTML}{FFFFFF}
-
-
-% dark theme
-%\definecolor{textPrimary} {HTML}{000000}
-%\definecolor{textAccent}  {HTML}{000000}
-
-%\definecolor{shadow}{HTML}{000000}
-%\definecolor{BGgrey01}{HTML}{000000}
-%\definecolor{BGgrey02}{HTML}{212121}
-%\definecolor{BGgrey03}{HTML}{303030}
-%\definecolor{BGgrey04}{HTML}{424242}
-
-
-\setbeamercolor*{title}{fg=white}
-\setbeamercolor*{author}{fg=white}
-\setbeamercolor*{date}{fg=white}
+\setbeamercolor*{title}{fg=textPrimary}
+\setbeamercolor*{author}{fg=textPrimary}
+\setbeamercolor*{date}{fg=textPrimary}
 \setbeamercolor*{item}{fg=accent}
 
 \mode
