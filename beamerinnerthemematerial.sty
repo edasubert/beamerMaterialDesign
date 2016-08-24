@@ -28,15 +28,15 @@
       {\usebeamerfont{author}\insertdate}
     \end{tcolorbox}
     
-    \begin{tcolorbox}[arc=5mm,width=10mm,height=10mm, enhanced, %
-                  colback=accent, coltext=textAccent, %
-                  fuzzy shadow={0mm}{ 0.9mm}{ 0.6mm}{0.2mm}{shadow!20!primary}, % top
-                  fuzzy shadow={0mm}{-0.6mm}{-0.1mm}{0.2mm}{shadow!40!BGgrey03}, % bottomSmall
-                  fuzzy shadow={0mm}{-0.2mm}{-0.2mm}{0.2mm}{shadow!20!BGgrey03}, % bottomBig
-                  left=1.5mm, right=1.5mm, top=1.5mm, bottom=1.5mm, boxsep=0mm, %
-                  boxrule=0mm, enlarge left by=10mm, enlarge top by=-10mm]%
-                  \includegraphics[width=7mm]{\iconFolder/ic_account_circle_48px}
-    \end{tcolorbox}
+    %\begin{tcolorbox}[arc=5mm,width=10mm,height=10mm, enhanced, %
+                  %colback=accent, coltext=textAccent, %
+                  %fuzzy shadow={0mm}{ 0.9mm}{ 0.6mm}{0.2mm}{shadow!20!primary}, % top
+                  %fuzzy shadow={0mm}{-0.6mm}{-0.1mm}{0.2mm}{shadow!40!BGgrey03}, % bottomSmall
+                  %fuzzy shadow={0mm}{-0.2mm}{-0.2mm}{0.2mm}{shadow!20!BGgrey03}, % bottomBig
+                  %left=1.5mm, right=1.5mm, top=1.5mm, bottom=1.5mm, boxsep=0mm, %
+                  %boxrule=0mm, enlarge left by=10mm, enlarge top by=-10mm]%
+                  %\includegraphics[width=7mm]{\iconFolder/ic_account_circle_48px}
+    %\end{tcolorbox}
   \end{minipage}%
   }%
   \vfill
@@ -46,6 +46,8 @@
 \setbeamertemplate{enumerate items}[circle]
 \setbeamertemplate{itemize items}{\Large $\bullet$}
 \setbeamertemplate{sections/subsections in toc}[circle]
+
+\setbeamercolor{local structure}{fg=accent}
 
 \mode
 <all>

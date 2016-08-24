@@ -3,7 +3,7 @@
 % Requirement
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
-\RequirePackage[sfdefault]{roboto}
+%\RequirePackage{roboto}
 \RequirePackage[many]{tcolorbox}
 
 % Settings
@@ -17,7 +17,7 @@
 \setbeamerfont*{frametitle}{size=\large}
 
 \newenvironment{card}{%
-  \begin{tcolorbox}[colback=BGgrey04, colbacktitle=primary, %
+  \begin{tcolorbox}[colback=BGgrey04, colbacktitle=primary, coltitle=textPrimary, coltext=text,%
                     enhanced, sharpish corners=all,%
                     fuzzy shadow={0mm}{ 0.9mm}{ 0.6mm}{0.2mm}{shadow!20!BGgrey03}, % top
                     fuzzy shadow={0mm}{-0.6mm}{-0.1mm}{0.2mm}{shadow!40!BGgrey03}, % bottomSmall
@@ -30,17 +30,58 @@
   }
   
 \newenvironment{cardTitle}[1]{%
-  \begin{tcolorbox}[colback=BGgrey04, colbacktitle=primary, %
+  \begin{tcolorbox}[colback=BGgrey04, colbacktitle=primary, coltitle=textPrimary, coltext=text,%
                     enhanced, sharpish corners=all,%
                     fuzzy shadow={0mm}{ 0.9mm}{ 0.6mm}{0.2mm}{shadow!20!BGgrey03}, % top
                     fuzzy shadow={0mm}{-0.6mm}{-0.1mm}{0.2mm}{shadow!40!BGgrey03}, % bottomSmall
                     fuzzy shadow={0mm}{-0.2mm}{-0.2mm}{0.2mm}{shadow!20!BGgrey03}, % bottomBig
-                    title filled, boxrule=0mm, title=#1,
+                    title filled, boxrule=0mm, %
+                    title=#1,
                     left=6mm, right=6mm, top=3mm, bottom=6mm, middle=4mm, toptitle=4mm, bottomtitle=3mm,
                     segmentation code={\path[draw=BGgrey01](segmentation.west) -- (segmentation.east);}]%
     }{%
   \end{tcolorbox}%
   }
   
+\newcommand{\cardImg}[2]{%
+  \begin{tcolorbox}[colback=BGgrey04, colbacktitle=primary, coltitle=textPrimary, coltext=text,%
+                    enhanced, sharpish corners=all,%
+                    fuzzy shadow={0mm}{ 0.9mm}{ 0.6mm}{0.2mm}{shadow!20!BGgrey03}, % top
+                    fuzzy shadow={0mm}{-0.6mm}{-0.1mm}{0.2mm}{shadow!40!BGgrey03}, % bottomSmall
+                    fuzzy shadow={0mm}{-0.2mm}{-0.2mm}{0.2mm}{shadow!20!BGgrey03}, % bottomBig
+                    title filled, boxrule=0mm, lower separated=false,
+                    leftupper=0mm, rightupper=0mm, top=0mm, bottom=0mm, middle=1.5mm, boxsep=0mm,
+                    width=#2,
+                    segmentation code={\path[draw=BGgrey01](segmentation.west) -- (segmentation.east);}]%
+      \includegraphics[width=\textwidth]{#1}
+  \end{tcolorbox}}
+  
+\newcommand{\cardImgTitle}[3]{%
+  \begin{tcolorbox}[colback=BGgrey04, colbacktitle=primary, coltitle=textPrimary, coltext=text,%
+                    enhanced, sharpish corners=all,%
+                    fuzzy shadow={0mm}{ 0.9mm}{ 0.6mm}{0.2mm}{shadow!20!BGgrey03}, % top
+                    fuzzy shadow={0mm}{-0.6mm}{-0.1mm}{0.2mm}{shadow!40!BGgrey03}, % bottomSmall
+                    fuzzy shadow={0mm}{-0.2mm}{-0.2mm}{0.2mm}{shadow!20!BGgrey03}, % bottomBig
+                    title filled, boxrule=0mm, lower separated=false,
+                    leftupper=0mm, rightupper=0mm, top=0mm, middle=1.5mm, boxsep=0mm,
+                    leftlower=6mm, rightlower=6mm, bottom=6mm, 
+                    width=#2,
+                    segmentation code={\path[draw=BGgrey01](segmentation.west) -- (segmentation.east);}]%
+      \includegraphics[width=\textwidth]{#1}
+    \tcblower
+        #3%
+  \end{tcolorbox}}
+
+\newenvironment{cardImgTikz}[1]{%
+  \begin{tcolorbox}[colback=BGgrey04, colbacktitle=primary, coltext=textPrimary,%
+                    enhanced, sharpish corners=all,%
+                    fuzzy shadow={0mm}{ 0.9mm}{ 0.6mm}{0.2mm}{shadow!20!BGgrey03}, % top
+                    fuzzy shadow={0mm}{-0.6mm}{-0.1mm}{0.2mm}{shadow!40!BGgrey03}, % bottomSmall
+                    fuzzy shadow={0mm}{-0.2mm}{-0.2mm}{0.2mm}{shadow!20!BGgrey03}, % bottomBig
+                    title filled, boxrule=0mm, lower separated=false,
+                    leftupper=0mm, rightupper=0mm, top=0mm, bottom=0mm, middle=1.5mm, boxsep=0mm,
+                    width=#1,
+                    segmentation code={\path[draw=BGgrey01](segmentation.west) -- (segmentation.east);}]}{%
+  \end{tcolorbox}}
 
 \mode<all>
