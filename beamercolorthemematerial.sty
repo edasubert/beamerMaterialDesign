@@ -1,14 +1,9 @@
 \mode<presentation>
 
-% Settings
-
-\newcommand{\iconFolder}{iconLight}
-
 % light theme
 \newcommand{\useLightTheme}{
 \definecolor{text}        {HTML}{000000}
 \setbeamercolor*{normal text}{fg=text}
-\renewcommand{\iconFolder}{iconLight}
 
 \definecolor{shadow}{HTML}{000000}
 \definecolor{BGgrey01}{HTML}{E0E0E0}
@@ -22,7 +17,6 @@
 \newcommand{\useDarkTheme}{
 \definecolor{text}        {HTML}{FFFFFF}
 \setbeamercolor*{normal text}{fg=text}
-\renewcommand{\iconFolder}{iconDark}
 
 \definecolor{shadow}{HTML}{000000}
 \definecolor{BGgrey01}{HTML}{000000}
@@ -31,8 +25,12 @@
 \definecolor{BGgrey04}{HTML}{424242}
 }
 
-
 % PRIMARY --------------------------------------------------------------
+\newcommand{\usePrimary}[3]{
+\definecolor{primary} {HTML}{#1}
+\definecolor{primaryD}{HTML}{#2}
+\definecolor{textPrimary} {HTML}{#3}
+}
 
 % Primary Red
 \newcommand{\usePrimaryRed}{
@@ -50,7 +48,7 @@
 
 % Primary Purple
 \newcommand{\usePrimaryPurple}{
-\definecolor{primary} {HTML}{9C27B0}
+\definecolor{primary} {HTML}{6A1B9A}
 \definecolor{primaryD}{HTML}{7B1FA2}
 \definecolor{textPrimary} {HTML}{FFFFFF}
 }
@@ -101,7 +99,7 @@
 \newcommand{\usePrimaryGreen}{
 \definecolor{primary} {HTML}{4CAF50}
 \definecolor{primaryD}{HTML}{388E3C}
-\definecolor{textPrimary} {HTML}{000000}
+\definecolor{textPrimary} {HTML}{FFFFFF}
 }
 
 % Primary Light Green
@@ -169,6 +167,11 @@
 
 
 % ACCENT ---------------------------------------------------------------
+
+\newcommand{\useAccent}[2]{
+\definecolor{accent} {HTML}{#1}
+\definecolor{textAccent} {HTML}{#2}
+}
 
 % Accent Red
 \newcommand{\useAccentRed}{
@@ -271,6 +274,9 @@
 \useLightTheme
 \usePrimaryIndigo
 \useAccentPink
+
+% more color settings
+\setbeamercolor{block title}{fg=primary}
 
 
 \mode

@@ -1,15 +1,4 @@
-\setbeamertemplate{background}{
-  \begin{tikzpicture}
-  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
-  \fill[color=BGgrey03] (0,0) rectangle(\the\paperwidth,\the\paperheight);
-  \fill[color=primaryD] (0,\the\paperheight) rectangle(\the\paperwidth,0.9\paperheight);
-  \ifx\insertframetitle\@empty
-      \ifnum\thepage>1\relax%
-       \fill[color=BGgrey03] (0,0) rectangle(\the\paperwidth,\the\paperheight);
-       \fi
-   \fi
-  \end{tikzpicture}
-}
+\setbeamercolor{background canvas}{bg=BGgrey03}
 
 % Title page
 \defbeamertemplate*{title page}{material}[1][]
