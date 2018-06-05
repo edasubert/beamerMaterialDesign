@@ -18,6 +18,7 @@
 \setbeamerfont*{frametitle}{size=\large}
 
 % tcolorbox settings
+\newcommand{\setCardSettings}{%
 \tcbset{%
 colback=BGgrey04, colbacktitle=primary, coltitle=textPrimary, coltext=text,%
 enhanced, sharpish corners=all,%
@@ -28,9 +29,12 @@ left=6mm, right=6mm, top=6mm, bottom=6mm, middle=4mm,%
 title filled, boxrule=0mm, %
 segmentation code={\path[draw=BGgrey01](segmentation.west) -- (segmentation.east);}%
 }
+}
 
+\setCardSettings
 
 \newenvironment{card}[1][pR23s2OTKY]{%
+  \setCardSettings
     \ifthenelse{\equal{#1}{pR23s2OTKY}}{%
       \begin{tcolorbox}%
     }{%
@@ -41,6 +45,7 @@ segmentation code={\path[draw=BGgrey01](segmentation.west) -- (segmentation.east
 }
 
 \newenvironment{cardTiny}{%
+  \setCardSettings
   \begin{tcolorbox}[colbacktitle=primary, left=4mm, right=4mm, top=2mm, bottom=2mm, middle=4mm, toptitle=4mm, bottomtitle=3mm,]%
 }{%
   \end{tcolorbox}%
@@ -48,6 +53,7 @@ segmentation code={\path[draw=BGgrey01](segmentation.west) -- (segmentation.east
 
   
 \newcommand{\cardImg}[3][pR23s2OTKY]{%
+  \setCardSettings
   \ifthenelse{\equal{#1}{pR23s2OTKY}}{%
     \begin{tcolorbox}[lower separated=false, leftupper=0mm, rightupper=0mm, top=0mm, bottom=0mm, middle=1.5mm, boxsep=0mm, width=#3,]%
       \includegraphics[width=\textwidth]{#2}
@@ -62,6 +68,7 @@ segmentation code={\path[draw=BGgrey01](segmentation.west) -- (segmentation.east
 }
   
 \newenvironment{frameImg}[2][width]{%
+  \setCardSettings
   \ifthenelse{\equal{#1}{width}}{%
     \usebackgroundtemplate{\hspace{-0.5\paperwidth}\parbox[c][\paperheight][c]{2\paperwidth}{\centering\includegraphics[width=\paperwidth, keepaspectratio=true]{#2}}}%
   }{%
