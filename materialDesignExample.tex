@@ -1,5 +1,6 @@
 \documentclass[aspectratio=43]{beamer}
 \usepackage[utf8]{inputenc}
+\usepackage{multicol}
 
 \title{Material Design theme \\manual}
 \date{\today}
@@ -153,6 +154,20 @@ Lastly it is possible to set image as a background for a frame:\\[2mm]
 Parameter {\color{primary} ["height"]} determines the dimension that is stretched to cover the frame ({\color{primary} ["width"]} is default).
 \end{cardTiny}
 \end{frameImg}
+
+\begin{frame}
+\begin{multicols}{2}
+[
+\begin{cardTiny}
+Two images side by side with columns.
+\end{cardTiny}
+]
+\centering
+\cardImg{img/rudolfinum.jpg}{0.48\textwidth}
+
+\cardImg{img/rudolfinum.jpg}{0.48\textwidth}
+\end{multicols}
+\end{frame}
 
 \begin{frame}
 \begin{card}
